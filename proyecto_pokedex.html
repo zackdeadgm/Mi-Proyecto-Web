@@ -1,66 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>pokedex</title>
 </head>
-<body style="background-color: black;">
-<header>
-    <a style="color: blue;font-size: 20px;" href="index.html">Inicio</a>              
-     <img style="width:50px ;color: white;" id=logo src="" alt="">
-     <h1 style="color:purple ; text-align:center;">Mi pokedex</h1>
+<body>
+    <header>
+     <img id="logo" src="https://img.icons8.com/color/480/pokedex.png" alt="logo">
+     <h1>Mi Pokedex</h1>
     </header>
     <nav>
-         <a href="https://www.google.com/search?q=chayanne&sxsrf=ALiCzsbrY5gFucAEHlK-ePsmVJfx4IZcUQ:1654374350567&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjUqvbb0JT4AhWRPN8KHWDWDlQQ_AUoAnoECAIQBA&biw=1242&bih=632&dpr=1.1#imgrc=ydYHLM0sUyxR-M"><b style="color: aqua;">inicio</b></a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><b style="color: aqua;">acerca</b></a>
-        <a href="https://deltarune.com/"><b style="color: aqua;">Epico</b></a>
-        <a href="https://undertale.com/"><b style="color: aqua;">EPICO</b></a>
-        
+        <a href="">Inicio</a>
+        <a href="">Acerca</a>
     </nav>
+    <hr>
     <main>
         <div id="pokedex">
-     <div id="left">
-         <div class="display"></div>
-         <div>
-         <img style="width:150px ;justify-content: center ;color: white;" id="pkmn-img" src="img/charmander.png" alt="pokemon">
-         </div>
-         <div id="dpad">
-         <div id="btn-circle"></div>
-     </div>
-     <div id="right">
-         <div class="display"></div>
-         
-         <ul>
-             <li style="color: orange;">
-                 <p style="color:white ;"><b>Nombre:charmander </b></p>
-             </li>
-             <li style="color: orange;">
-                 <p style="color:white ;"><b>Tipo:fuego </b></p>
-             </li>
-             <li style="color: orange;">
-                 <p style="color: white;"><b>altura:0.6 M. </b></p> 
-             </li>
-             <li style="color: orange;">
-                 <p style="color: white;"><b>peso:8.5 kg. </b></p>
-             </li>
-             <li style="color: orange;">
-                 <p style="color: white;"><b>Descripcion: le gusta decir: hola bombarden peru </b></p>
-            </li>
-         </ul>
-     </div>
-     <div id="pad"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
-        </div>
+            <div id="left">
+                <div class="display">
+                  <img id="pkmn-img" src="img/charmander.png"pokemon">    
+                </div>
+                <div id="dpad">
+                    <div id="dpad-top"></div>
+                    <div id="dpad-horizontal"></div>
+                    <div id="dpad-bottom"></div>
+                </div>
+                <div id="btn-circle"></div>
+            </div>
+            <div id="right">
+                <div class="display">
+                    <ul>
+                        <li>
+                            <p><b>nombre: </b>charmander</p>
+                        </li>
+                        <li>
+                            <p><b>tipo: </b>fuego</p>
+                        </li>
+                        <li>
+                            <p><b>Altura: </b>0.6 m.</p>
+                        </li>
+                        <li>
+                            <p><b>peso: </b>8.5 kg.</p>
+                        </li>
+                        <li>
+                            <p><b>descripcion: </b>la cosa mas tierna pero poderosa</p>
+                        </li>
 
+                    </ul>
+                </div>
+                <div id="pad">
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
