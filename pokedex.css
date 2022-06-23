@@ -127,3 +127,45 @@ li{
 li > p{
     margin: 0 5px;
 }
+@media screen and (max-width:639px){
+    body{
+        height: 30px;
+    }
+    header{
+        width: 190%;
+        font-size: 30px;
+    }
+    nav{
+        font-size: 30px;
+    }
+    hr{
+        width: 210%;
+    }
+    ul{
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width:640px) and (max-width:1023px){
+    header{
+        font-size: 20px;
+    }
+    nav{
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width:1024px) and (max-width:1279px){
+   header{
+    font-size: 20px;
+   }
+   nav{
+    font-size: 25px;
+   }
+}
+@media only screen and (min-width:1280px) and (max-width:1919px){
+    header{
+        font-size: 20px;
+    }
+    nav{
+        font-size: 23px;
+    }
+}

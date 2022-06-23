@@ -1,0 +1,92 @@
+*{font-family: sans-serif;}
+
+body{
+    width: 100%;
+    height: 700px;
+    background-color: blue;}
+main{
+    width: 95%;
+    margin: auto;
+}
+header,footer{
+    width: 97%;
+    height: 230px;
+    margin: auto;
+    background-color: orange;
+}
+div{
+    height: 3000px;
+    width: 97%;
+    margin: auto;
+    background-color: green;
+
+}
+section{
+    width: 90%;
+    margin: 40px;
+    height: 690px;
+    background-color: yellow;
+}
+p{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    background-color: gray;
+}
+
+h1{
+   width: 330px;
+   font-size: 24px;
+   padding: 1px;
+   height: 65px;
+   border: 2px black solid;
+   text-align: center;
+   background-color: white;
+ }
+ #LOGO{
+    width: 100px;
+ }
+img{
+    width: 210px;
+    
+}
+a{font-size: 20px;
+color: red;
+text-align: right;
+}
+#pie{
+    color: white;
+}
+@media screen and (max-width:639px){
+    body{
+        width: 100%;
+    }
+    p,a{
+        font-size: 12px;
+    }
+    h1{
+        width: 250px;
+    }
+    section{
+        width: 277px;
+    }
+}
+@media only screen and (min-width:640px) and (max-width:1023px){
+    body{
+        width: 102%;
+        height: 100%;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width:1024px) and (max-width:1279px){
+    p{
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width:1280px) and (max-width:1919px){
+    p{
+        font-size: 22px;
+    }
+}
