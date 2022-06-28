@@ -1,5 +1,5 @@
 body{
-    font-family: cursive;
+    font-family: sans-serif;
     margin: 0;
 }
 header{
@@ -129,17 +129,17 @@ li > p{
 }
 @media screen and (max-width:639px){
     body{
-        height: 30px;
+        height: 20px;
     }
     header{
-        width: 190%;
+        width: 100%;
         font-size: 30px;
     }
     nav{
         font-size: 30px;
     }
     hr{
-        width: 210%;
+        width: 100%;
     }
     ul{
         font-size: 13px;
