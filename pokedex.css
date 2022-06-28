@@ -36,6 +36,7 @@ nav > a{
     background-color: blue;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 #right{
     width: 250px;
@@ -47,6 +48,7 @@ nav > a{
     border-left-width: 3px;
     float: left;
     border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
 }
 .display{
     border-color: gray;
@@ -132,14 +134,14 @@ li > p{
         height: 20px;
     }
     header{
-        width: 100%;
+        width: 119%;
         font-size: 30px;
     }
     nav{
         font-size: 30px;
     }
     hr{
-        width: 100%;
+        width: 138%;
     }
     ul{
         font-size: 13px;
