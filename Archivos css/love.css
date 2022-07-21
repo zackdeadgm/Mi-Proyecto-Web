@@ -1,0 +1,37 @@
+body{
+    background-image: url("https://img.freepik.com/vector-gratis/vector-imagen-fondo-patron-corazon-lindo_53876-140510.jpg?w=2000");
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#btnSi{
+    border: none;
+    background-color: forestgreen;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    margin-top: 25%;
+    margin-right: 10%;
+    margin-left: 35%;
+    border-radius: 10px;
+}
+#btnNo{
+    border: none;
+    background-color: red;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+}

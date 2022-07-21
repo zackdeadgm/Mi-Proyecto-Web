@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.navbar{
+    background-color: #94bdf3;
+    position: static;
+}
+.navbar a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .3s ease-out all;
+}
+
+.navbar a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.Badbunny{
+    margin: 90px;
+    display: flex;
+}
+.Badbunny img{
+    width: 600px;
+}
+.InformacionDerecha{
+    padding-left: 70px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.InformacionDerecha h2{
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+    background-color: 	#ff6347;
+    width: 200px;
+    height: 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.InformacionDerecha p{
+    padding-top: 30px;
+}
+.Aspecto{
+    margin: 90px;
+    padding-top: 100px;
+}
+.Aspecto img{
+    float: right;
+    width: 520px;
+    padding-right: 30px;
+}
+.InformacionIzquierda h2{
+    margin-left: 200px;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: 	#ff6347;
+    width: 200px;
+    height: 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.Origen{
+    margin: 90px;
+    padding-top: 100px;
+    display: flex;
+}
+.Datos{
+    margin: 90px;
+    display: flex;
+}
+.Datos img{
+    width: 500px;
+}

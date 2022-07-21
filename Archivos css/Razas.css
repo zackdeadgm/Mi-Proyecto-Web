@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-fantasia-nube-ensueno-arco-iris_1017-32300.jpg?w=2000");
+    font-family: 'Noto Sans JP', sans-serif;	
+}
+/* =====HEADER=====*/
+.navbar {
+	background: #94bdf3;
+	position: sticky;
+	top:0;
+}
+
+.navbar a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .3s ease-out all;
+}
+
+.navbar a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+/*DIV*/
+.contenido{
+	margin-top: 100px;
+	display: flex;
+}
+.imagenes a img{
+    position: relative;
+    width: 266px;
+	padding-left: 20px;
+    height: 600px;
+    overflow: hidden;
+    
+}
+.imagenes{
+	padding-top: 9px;
+}
+
+/*.imagenes a img{
+    width: 265px;
+    height: 600px;
+}*/
+.imagenes a:hover > img{
+    transform: scale(1.03);
+}

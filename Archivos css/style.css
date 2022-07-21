@@ -1,0 +1,96 @@
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(209, 253, 253);
+
+}
+li {
+ float: left;
+ display: inline;
+
+}
+.lugares{
+ display: block;
+ padding: 8px;
+ background-color: black
+}
+ul {
+ background-color: #dddddd;
+}
+ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #333;
+ padding-bottom: 0;
+}
+
+li {
+ float: left;
+}
+
+li .lugares{
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 15px 16px;
+ text-decoration: none;
+}
+li .lugares:hover {
+ background-color: rgb(111, 226, 107);
+}
+.active {
+ background-color: black
+}
+#clase{
+    text-align: center;
+    background-color: rgb(131, 131, 241);
+    width: 98.5%;
+    height: 140px;
+    padding: 10px;
+}
+#clase > p{
+    font-size: 20px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(88, 231, 231);
+}
+a img:hover{
+    background-color: rgb(81, 81, 240);
+}
+div{
+    margin: auto;
+    text-align: center;
+    padding-right: 10px;
+}
+@media screen and (max-width:639px){
+    body{
+        font-size: 9pt;
+        width: 92%;
+    }
+    ul{
+        width: 104%;
+    }
+}
+@media only screen and (min-width:640px) and (max-width:1023px){
+    body{
+        font-size: 16px;
+        width: 97.8%;
+    }
+    ul{
+        width: 100.7%;
+    }
+}
+@media only screen and (min-width:1024px) and (max-width:1279px){
+    body{
+        font-size: 20px;
+        width: 98%;
+    }
+}
+@media only screen and (min-width:1280px) and (max-width:1919px){
+    body{
+        font-size: 20px;
+    }
+}
