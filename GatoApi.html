@@ -1,63 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gatos</title>
+  <link rel="stylesheet" href="Archivos css/gatoapi.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <style>
-    * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html{
-	scroll-behavior: smooth;
-}
-a {
-	text-decoration: none;
-	outline: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-body {
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-fantasia-nube-ensueno-arco-iris_1017-32300.jpg?w=2000");
-    font-family: 'Noto Sans JP', sans-serif;	
-}
-/* =====HEADER=====*/
-.navbar {
-	background: #94bdf3;
-	position: sticky;
-	top:0;
-}
-
-.navbar a {
-	color: #fff;
-	display: inline-block;
-	padding: 20px;
-	width: 100%;
-	text-align: center;
-	color: #000;
-	transition: .3s ease-out all;
-}
-
-.navbar a:hover {
-	background: #1D2F3D;
-	color: #fff;
-	text-decoration: none;
-}
-  </style>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-		<nav class="navbar">
+	 	<nav class="navbar">
 			<div class="contenedor">
 				<a href="proyecto_final.html">Inicio</a>
 				<a href="Razas.html">Razas</a>
@@ -66,110 +20,82 @@ body {
 			</div>
 		</nav>
 	</header>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-  <div id="app">
-    <v-app>
-      <v-content>
-        <v-container>
-
-            <v-layout align-center justify-center>
-                <v-btn color="blue" dark large @click="loadNextImage" >
-                    Another &nbsp; <v-icon>refresh</v-icon>
-                </v-btn>
-            </v-layout>
-
-            <v-layout row wrap>
-                <v-flex xs12 >
-                <v-card flat tile class="d-flex">
-                    <v-img :src="image.url" contain>
-                    </v-img>
-                </v-card>
-                </v-flex>
-            </v-layout>
-
-        </v-container>
-      </v-content>
-    </v-app>
-  </div>
- 
-  <script>
-    new Vue({ 
-        el: '#app',
-        vuetify: new Vuetify(),
-        data: {
-            image: { url: ""}
-        },
-        created(){
-            this.loadNextImage();
-        } ,
-        methods:{
-            async loadNextImage()
-            {
-                try{
-                    axios.defaults.headers.common['x-api-key'] = "DEMO-API-KEY" // Replace this with your API Key
-
-                    let response = await axios.get('https://api.thecatapi.com/v1/images/search', { params: { limit:1, size:"full" } } ) // Ask for 1 Image, at full resolution
-                    
-                    this.image = response.data[0] // the response is an Array, so just use the first item as the Image
-
-                    console.log("-- Image from TheCatAPI.com")
-                    console.log("id:", this.image.id)
-                    console.log("url:", this.image.url)
-
-                }catch(err){
-                    console.log(err)
-                }
-            }
-        }
-    })
-  </script>
+  <main>
+    <button onclick="Buscar()"><h3>Cambiar raza</h3></button>
+	<div class="todo">
+		<img id="img" src="https://www.bunko.pet/__export/1635633199382/sites/debate/img/2021/10/30/persa_blanco_crop1635633155395.jpeg_819749066.jpeg" alt="">
+		<div class="texto">
+			<h2 id="name">Gato Persa</h2>
+			<ul>
+				<li>
+					<p id="Nombre_científico"><b>Nombre científico: </b>Felis catus</p>
+				</li>
+				<li>
+					<p id="Vida_media"><b>Vida media: </b>13 años</p>
+				</li>
+				<li>
+					<p id="Tamaño"><b>Tamaño: </b>mediano - grande</p>
+				</li>
+				<li>
+					<p id="Peso"><b>Peso: </b>de 3 a 7 kilos</p>
+				</li>
+				<li>
+					<p id="Origen"><b>Origen: </b>Iran</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+  </main>
 </body>
-<style>
-  .navbar {
-	background: #94bdf3;
-	position: sticky;
-	top:0;
-}
+<script>
+	var idp=1;
+    var long=0;
 
-.navbar a {
-	color: #fff;
-	display: inline-block;
-	padding: 20px;
-	width: 100%;
-	text-align: center;
-	color: #000;
-	transition: .3s ease-out all;
-}
+    const url = "https://zackdeadgm.github.io/ApiGato/ApiGato.json";
 
-.navbar a:hover {
-	background: #1D2F3D;
-	color: #fff;
-	text-decoration: none;
-}
+    function buscar(){
+    
+        fetch(url)
+        .then(function(response){
+            return response.json();    
+        })
+    
+        .then(function(data){
+            console.log(data.figures);
+            long=data.figures.length;
+            console.log("lenght:"+ long);
+        
+            var res= data.figures.filter(item=>item.id===idp);
+            console.log(res);
+            var imagen=document.getElementById('img');
+            imagen.src=res[0].img;
+            var p1=document.getElementById('name');
+            p1.innerHTML="<h2>Gato: </h2>"+res[0].name;
+            var p2=document.getElementById('Nombre_científico');
+            p2.innerHTML="<b>Nombre científico: </b>"+res[0].Nombre_científico;
+            var p3=document.getElementById('Vida_media');
+            p3.innerHTML="<b>Vida media: </b>"+res[0].Vida_media;
+            var p4=document.getElementById('Tamaño');
+            p4.innerHTML="<b>Tamaño: </b>"+res[0].Tamaño;
+            var p5=document.getElementById('Peso');
+            p5.innerHTML="<b>Peso: </b>"+res[0].Peso;
+			var p6=document.getElementById('Origen');
+			p6.innerHTML="<b>Origen: </b>"+res[0].Origen;
+        })
 
-.contenedor {
-	max-width: 1000px;
-	width: 90%;
-	margin: auto;
-	display: flex;
-	justify-content: space-between;
-}
-/*DIV*/
-.contenido{
-	margin-top: 100px;
-	display: flex;
-}
-.imagenes a img{
-    width: 270px;
-    height: 270px;
-    background-color: red;
-}
-.imagenes a img:hover{
-    background-color: purple;
-}
-img{
-  width: 20px;
-}
-</style>
+        .catch(function(error){
+            console.log(error);           
+        });
+
+        if (idp >= long){
+            idp=1;
+        }else{
+            idp++;
+        }
+        
+    }    
+</script>
+<script>
+	buscar()
+</script>
 </html>
