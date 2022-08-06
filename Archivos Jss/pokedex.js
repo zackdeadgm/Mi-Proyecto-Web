@@ -1,7 +1,7 @@
 var idp=1;
 var long=0;
 
-const url = "https://zackdeadgm.github.io/ApiGato/ApiGato.json";
+const url = "https://zackdeadgm.github.io/ApiPoke/Apipoke.json";
 
 function buscar(){
 
@@ -18,19 +18,17 @@ function buscar(){
         var res= data.figures.filter(item=>item.id===idp);
         console.log(res);
         var imagen=document.getElementById('pkm-img');
-        imagen.src=res[0].img;
+        imagen.src=res[0].figure;
         var p1=document.getElementById('name');
-        p1.innerHTML="<b>Gato </b>"+res[0].name;
+        p1.innerHTML="<b>Nombre: </b>"+res[0].name;
         var p2=document.getElementById('type');
-        p2.innerHTML="<b>Nombre cientifico: </b>"+res[0].Nombre_científico;
+        p2.innerHTML="<b>Tipo: </b>"+res[0].type;
         var p3=document.getElementById('height');
-        p3.innerHTML="<b>Vida media: </b>"+res[0].Vida_media;
+        p3.innerHTML="<b>Altura: </b>"+res[0].height+"cms.";
         var p4=document.getElementById('weight');
-        p4.innerHTML="<b>Tamaño: </b>"+res[0].Tamaño;
+        p4.innerHTML="<b>Peso: </b>"+res[0].weight+"kg.";
         var p5=document.getElementById('des');
-        p5.innerHTML="<b>Peso: </b>"+res[0].Peso;
-        var p6=document.getElementById('Origen');
-        p6.innerHTML="<b>Origen: </b>"+res[0].Origen
+        p5.innerHTML="<b>Descripción: </b>"+res[0].des;
     })
 
     .catch(function(error){

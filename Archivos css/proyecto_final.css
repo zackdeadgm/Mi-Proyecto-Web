@@ -4,12 +4,12 @@
 	box-sizing: border-box;
 }
 
-html{
-	scroll-behavior: smooth;
-}
 a {
 	text-decoration: none;
 	outline: none;
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 a:hover {
@@ -17,14 +17,13 @@ a:hover {
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;	
 	background: #f2f2f2;
 }
 /* =====HEADER=====*/
 .navbar {
 	background: #94bdf3;
-	position: sticky;
 	top:0;
+	border-top: 2px #000;
 }
 
 .navbar a {
@@ -50,23 +49,50 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
-
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(90, 158, 170);
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: #1D2F3D}
+  
+  ul.topnav li a.active {background-color: #1D2F3D}
+  
+  ul.topnav li.right {float: right;}
+  
 /* * ============================== */
 /* * ===== CONTENEDOR IMAGEN ====== */
 /* * ============================== */
-
-.contenedor-imagen {
-	height: 100vh;
-}
-
-.contenedor-imagen img {
+.contenedor-imagen{
+    font-family: 'Cabin', sans-serif;
+	background-color: rgb(108, 181, 194);
 	width: 100%;
-	height: 100%;
-	vertical-align: top;
-	object-fit: cover;
-	object-position: 0 bottom;
-}
+	height: 150px;
+	display: flex;
 
+}
+.contenedor-imagen h1{
+    font-size: 50px;
+	padding-top: 30px;
+	padding-left: 470px;
+	color: rgb(0,0,0);
+}
+.contenedor-imagen img{
+	float: left;
+}
 /* * ============================== */
 /* * ============ MAIN ============ */
 /* * ============================== */
@@ -145,13 +171,24 @@ footer .navbar{
 		flex: 1;
 	}
 
-	.contenedor-imagen {
-		height: 50vh;
+	.contenedor-imagen h1{
+		padding-left: 30px;
+		font-size: 40px;
+		margin: 30px;
+	}
+	.contenedor-imagen img{
+		width: 150px;
 	}
 
 	main .contenedor {
 		flex-direction: column;
 	}
+	ul{
+        font-size: 13px;
+    }
+    .topnav li.right,
+    ul.topnav li {float: none;}
+	
 }
 @media screen and (max-width:639px){
     .navbar .contenedor{
@@ -160,5 +197,18 @@ footer .navbar{
 	.contenedor-imagen{
      width: 100%;
 	 height: 100%;
+	}
+	ul{
+        font-size: 13px;
+    }
+    .topnav li.right,
+    ul.topnav li {float: none;}
+	.contenedor-imagen h1{
+		padding-left: 30px;
+		font-size: 30px;
+		padding-right: 120px;
+	}
+	.contenedor-imagen img{
+		width: 120px;
 	}
 }

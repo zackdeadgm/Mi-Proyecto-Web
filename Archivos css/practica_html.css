@@ -3,7 +3,7 @@
 body{
     width: 100%;
     height: 700px;
-    background-color: blue;}
+    background-color: rgb(75, 200, 238);}
 main{
     width: 95%;
     margin: auto;
@@ -12,20 +12,20 @@ header,footer{
     width: 97%;
     height: 230px;
     margin: auto;
-    background-color: orange;
+    background-color: rgb(59, 174, 194);
 }
 div{
     height: 3000px;
     width: 97%;
     margin: auto;
-    background-color: green;
+    background-color: rgb(33, 118, 158);
 
 }
 section{
     width: 90%;
     margin: 40px;
     height: 690px;
-    background-color: yellow;
+    background-color: rgb(53, 102, 131);
 }
 p{
     color: white;

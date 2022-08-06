@@ -4,20 +4,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Archivos css/pokedex.css">
     <title>pokedex</title>
 </head>
+<style>
+    body{
+    font-family: sans-serif;
+    margin: 0;
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 0 10%;
+}
+header > h1{
+    display: inline-block;
+    margin-left: 30px;
+
+}
+#logo{
+    width: 80px;
+
+}
+#pkmn-img{
+    width: 120px;
+}
+nav > a{
+    margin: 0 10px;
+}
+#pokedex{
+    width: 750px;
+    margin: 50px auto;
+}
+#left{
+    width: 250px;
+    height: 300px;
+    float: left;
+    background-color: rgba(233, 97, 233, 0.87);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+#right{
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    background-color: rgba(233, 97, 233, 0.87);
+    border-left-color: rgb(197, 13, 197);
+    border-left-style: solid;
+    border-left-width: 3px;
+    float: left;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.display{
+    border-color: #494949;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 5px;
+}
+#left > .display{
+    width: 180px;
+    height: 150px;
+    margin-left: 35px;
+    margin-top: 40px;
+    background-color: white;
+}
+#left > .display img{
+    margin-left: 15px;
+    height: 100%;
+}
+#dpad {
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    margin-left: 20px;
+    display: inline-block;
+}
+#dpad-top, #dpad-bottom{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    background-color: #222222;
+}
+#dpad-horizontal{
+    width: 60px;
+    height: 20px;
+    margin-left: 1px;
+    background-color: #222222;
+}
+#btn-circle{
+    width: 50px;
+    height: 50px;
+    margin-left: 95px;
+    border-style: solid;
+    border-color: rgb(214, 42, 214);
+    border-radius: 25px;
+    background-color: rgb(214, 42, 214);
+    display: inline-block;
+}
+#right > .display{
+    width: 180px;
+    height: 120px;
+    margin-left: 35px;
+    margin-top: 20px;
+    background-color: green;
+    font-size: 12px;
+}
+#pad{
+    width: 148px;
+    height: 65px;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+#pad > .btn{
+    width: 25px;
+    height: 25px;
+    background-color: aqua;
+    display: inline-block;
+    border-style: solid;
+    border-color: #7d7ff7;
+    border-width: 2px;
+    border-radius: 5px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+li > p{
+    margin: 0 5px;
+}
+@media screen and (max-width:639px){
+    body{
+        height: 20px;
+    }
+    header{
+        width: 119%;
+        font-size: 30px;
+    }
+    hr{
+        width: 138%;
+    }
+    ul{
+        font-size: 13px;
+    }
+    nav.letras li.right, 
+    nav.letras a {float: none;}
+}
+@media only screen and (min-width:640px) and (max-width:1023px){
+    header{
+        font-size: 20px;
+    }
+    nav.letras a {float: none;}
+}
+@media only screen and (min-width:1024px) and (max-width:1279px){
+   header{
+    font-size: 20px;
+   }
+   nav.letras a {float: none;}
+}
+@media only screen and (min-width:1280px) and (max-width:1919px){
+    header{
+        font-size: 20px;
+    }
+    nav{
+        font-size: 23px;
+    }
+}
+</style>
 <body>
     <header>
      <img id="logo" src="https://img.icons8.com/color/480/pokedex.png" alt="logo">
      <h1>Mi Pokedex</h1>
     </header>
     <nav class="navegacion">
-        <ul class="topnav">
-            <li><a class="active" href="index.html">Inicio</a></li>
-            <li><a class="right" href="https://code.futureed.com/classes/21">futureED</a></li>
-        </ul>
+        <div class=letras>
+            <a href="">Inicio</a>
+            <a href="">Acerca</a>
+        </div>
     </nav>
+    <hr>
     <main>
         <div id="pokedex">
             <div id="left">
@@ -65,7 +233,51 @@
         </div>
     </main>
 </body>
-<script src="Archivos Jss/pokedex.js">
+<script>
+            var idp=1;
+    var long=0;
+
+    const url = "https://zackdeadgm.github.io/ApiPoke/Apipoke.json";
+
+    function buscar(){
+    
+        fetch(url)
+        .then(function(response){
+            return response.json();    
+        })
+    
+        .then(function(data){
+            console.log(data.figures);
+            long=data.figures.length;
+            console.log("lenght:"+ long);
+        
+            var res= data.figures.filter(item=>item.id===idp);
+            console.log(res);
+            var imagen=document.getElementById('pkm-img');
+            imagen.src=res[0].figure;
+            var p1=document.getElementById('name');
+            p1.innerHTML="<b>Nombre: </b>"+res[0].name;
+            var p2=document.getElementById('type');
+            p2.innerHTML="<b>Tipo: </b>"+res[0].type;
+            var p3=document.getElementById('height');
+            p3.innerHTML="<b>Altura: </b>"+res[0].height+"cms.";
+            var p4=document.getElementById('weight');
+            p4.innerHTML="<b>Peso: </b>"+res[0].weight+"kg.";
+            var p5=document.getElementById('des');
+            p5.innerHTML="<b>Descripción: </b>"+res[0].des;
+        })
+
+        .catch(function(error){
+            console.log(error);           
+        });
+
+        if (idp >= long){
+            idp=1;
+        }else{
+            idp++;
+        }
+        
+    }
 </script>
 <script>
     buscar()
