@@ -79,3 +79,9 @@ button{
 .todo .texto li{
 	padding-top: 30px;
 }
+@media screen and (max-width:639px){
+	main{
+		font-size: 50px;
+		width: 100%;
+	}
+}

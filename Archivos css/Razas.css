@@ -20,7 +20,49 @@ body {
    /* background-image: url("https://img.freepik.com/vector-gratis/fondo-fantasia-nube-ensueno-arco-iris_1017-32300.jpg?w=2000"); */
     font-family: 'Noto Sans JP', sans-serif;	
 }
-/* =====HEADER=====*/
+header{
+	width: 100%;
+	background-color: #94bdf3;
+}
+#btn-menu{
+	display: none;
+}
+header label{
+	display: none;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	border-right: 1px solid white;
+}
+header label img{
+	width: 30px;
+	
+}
+header label:hover{
+	cursor: pointer;
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none; 
+}
+.menu ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+.menu li:hover{
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;      
+}
+.menu li a{
+	display: block;
+	padding: 15px 40px;
+	color: #ffff;
+	text-decoration: none;
+}
+/* =====HEADER=====
 .navbar {
 	background: #94bdf3;
 	position: sticky;
@@ -49,7 +91,7 @@ body {
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
-}
+}*/
 /*DIV*/
 .contenido{
 	margin-top: 100px;
@@ -73,4 +115,30 @@ body {
 }*/
 .imagenes a:hover > img{
     transform: scale(1.03);
+}
+@media screen and (max-width:639px){
+	header label{
+		display: block;
+	}
+	.menu{
+		position: absolute;
+		background-color: #94bdf3;
+		width: 70%;
+		margin-left: -70%;
+	}
+	.menu ul{
+		flex-direction: column;
+	}
+	.menu li{
+		border-top: 1px solid #ffff;
+	}
+	#btn-menu:checked ~ .menu{
+		margin: 0;
+	}
+	.imagenes{
+		padding-top: 230px;
+	}
+}
+@media only screen and (min-width:640px) and (max-width:1023px){
+
 }

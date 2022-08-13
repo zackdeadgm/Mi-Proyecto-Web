@@ -19,32 +19,47 @@ a:hover {
 body {
     font-family: 'Noto Sans JP', sans-serif;
 }
-.navbar{
-    background-color: #94bdf3;
-    position: static;
-}
-.navbar a {
-	color: #fff;
-	display: inline-block;
-	padding: 20px;
+header{
 	width: 100%;
-	text-align: center;
-	color: #000;
-	transition: .3s ease-out all;
+	background-color: #94bdf3;
 }
-
-.navbar a:hover {
+#btn-menu{
+	display: none;
+}
+header label{
+	display: none;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	border-right: 1px solid white;
+}
+header label img{
+	width: 30px;
+	
+}
+header label:hover{
+	cursor: pointer;
 	background: #1D2F3D;
 	color: #fff;
-	text-decoration: none;
+	text-decoration: none; 
 }
-
-.contenedor {
-	max-width: 1000px;
-	width: 90%;
-	margin: auto;
+.menu ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+}
+.menu li:hover{
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;      
+}
+.menu li a{
+	display: block;
+	padding: 15px 40px;
+	color: #ffff;
+	text-decoration: none;
 }
 .Badbunny{
     margin: 90px;
@@ -106,4 +121,33 @@ body {
 }
 .Datos img{
     width: 500px;
+}
+@media screen and (max-width:639px){
+	header label{
+		display: block;
+	}
+	.menu{
+		position: absolute;
+		background-color: #94bdf3;
+		width: 70%;
+		margin-left: -70%;
+	}
+	.menu ul{
+		flex-direction: column;
+	}
+	.menu li{
+		border-top: 1px solid #ffff;
+	}
+	#btn-menu:checked ~ .menu{
+		margin: 0;
+	}
+    main{
+        font-size: 10px;
+    }
+    main img{
+        padding: 10px;
+    }
+}
+@media only screen and (min-width:640px) and (max-width:1023px){
+
 }
