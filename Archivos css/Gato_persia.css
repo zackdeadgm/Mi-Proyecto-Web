@@ -63,7 +63,6 @@ header label:hover{
 }
 .Badbunny{
     margin: 90px;
-    display: flex;
 }
 .Badbunny img{
     width: 600px;
@@ -94,7 +93,7 @@ header label:hover{
     padding-top: 100px;
 }
 .Aspecto img{
-    float: right;
+    
     width: 520px;
     padding-right: 30px;
 }
@@ -113,11 +112,9 @@ header label:hover{
 .Origen{
     margin: 90px;
     padding-top: 100px;
-    display: flex;
 }
 .Datos{
     margin: 90px;
-    display: flex;
 }
 .Datos img{
     width: 500px;
@@ -147,7 +144,165 @@ header label:hover{
     main img{
         padding: 10px;
     }
+	.Badbunny{
+		margin-left: 4px;
+		margin-top: 20px;
+	}
+	.Badbunny img{
+		padding-left: 50px;
+		padding-top: 81px ;
+		width: 310px;
+		height: 310px;
+	}
+	.InformacionDerecha{
+		width: 100%;
+		padding-left: 10px;
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+	.Badbunny h2{
+		text-align: center;
+		margin: auto;
+		padding-bottom: 30px;
+		background-color: 	#ff6347;
+		width: 200px;
+		height: 20px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	.InformacionDerecha p{
+		padding-top: 10px;
+		padding-left: 40px;
+		width: 100%;
+	}
+	.Aspecto{
+		margin: 90px;
+		padding-top: 100px;
+	}
+	.Aspecto img{
+		
+		width: 240px;
+		height: 180px;
+        padding-left: 10px;
+		padding-right: 30px;
+	}
+	
+	.InformacionIzquierda h2{
+		margin-left: 10px;
+		margin-bottom: 40px;
+		text-align: center;
+		background-color: 	#ff6347;
+		width: 200px;
+		height: 40px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	.Origen{
+		margin: 60px;
+		padding-top: 100px;
+		
+	}
+	.Origen img{
+        width: 290px;
+		height: 290px;
+		padding-left: 2px;
+	}
+	.Datos{
+		margin: 90px;
+		
+	}
+	.Datos img{
+		width: 240px;
+	}
 }
 @media only screen and (min-width:640px) and (max-width:1023px){
 
+}
+@media only screen and (min-width:1024px) and (max-width:1279px){
+
+}
+@media only screen and (min-width:1280px) and (max-width:1919px){
+	.menu ul{
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+	.menu li:hover{
+		background: #1D2F3D;
+		color: #fff;
+		text-decoration: none;      
+	}
+	.menu li a{
+		display: block;
+		padding: 15px 40px;
+		color: #ffff;
+		text-decoration: none;
+	}
+	.Badbunny{
+		margin: 90px;
+		display: flex;
+	}
+	.Badbunny img{
+		width: 600px;
+	}
+	.InformacionDerecha{
+		padding-left: 70px;
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+	.InformacionDerecha h2{
+		text-align: center;
+		margin: auto;
+		padding-bottom: 30px;
+		background-color: 	#ff6347;
+		width: 200px;
+		height: 40px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	
+	}
+	.InformacionDerecha p{
+		padding-top: 30px;
+	}
+	.Aspecto{
+		margin: 90px;
+		padding-top: 100px;
+	}
+	.Aspecto img{
+		float: right;
+		width: 520px;
+		padding-right: 30px;
+	}
+	.InformacionIzquierda h2{
+		margin-left: 200px;
+		margin-bottom: 40px;
+		text-align: center;
+		background-color: 	#ff6347;
+		width: 200px;
+		height: 40px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	.Origen{
+		display: flex;
+		margin: 90px;
+		padding-top: 100px;
+	}
+	.Datos{
+		display: flex;
+		margin: 90px;
+	}
+	.Datos img{
+		width: 500px;
+	}
 }
