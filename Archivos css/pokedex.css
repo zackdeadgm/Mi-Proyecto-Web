@@ -6,11 +6,11 @@ header{
     background-color: rgb(109, 150, 240);
     color: white;
     padding: 0 10%;
+    width: 80%;
 }
 header > h1{
     display: inline-block;
     margin-left: 30px;
-
 }
 #logo{
     width: 80px;
@@ -155,18 +155,140 @@ ul.topnav {
     body{
         height: 20px;
     }
-    header{
-        width: 119%;
-        font-size: 30px;
-    }
     hr{
-        width: 138%;
+        width: 100%;
+    }
+    ul.topnav{
+        width: 100%;
     }
     ul{
         font-size: 13px;
     }
     .topnav li.right,
     ul.topnav li {float: none;}
+    /*-------------*/
+    header{
+        background-color: rgb(109, 150, 240);
+        color: white;
+        padding: 0 10%;
+        width: 80%;
+        font-size: 20px;
+
+    }
+    header > h1{
+        display: inline-block;
+        margin-left: 0px;
+        font-size: 30px;
+    
+    }
+    #logo{
+        width: 50px;
+    }
+    #pkmn-img{
+        width: 120px;
+    }
+    nav > a{
+        margin: 0 10px;
+    }
+    #pokedex{
+        width: 750px;
+        margin: 50px auto;
+    }
+    #left{
+        width: 190px;
+        height: 290px;
+        float: left;
+        background-color: rgb(109, 150, 240);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    #right{
+        width: 190px;
+        height: 230px;
+        margin-top: 60px;
+        background-color: rgb(109, 150, 240);
+        border-left-color: rgb(90, 135, 233);
+        border-left-style: solid;
+        border-left-width: 3px;
+        float: left;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .display{
+        border-color: gray;
+        border-style: solid;
+        border-radius: 15px;
+        border-width: 5px;
+    }
+    #left > .display{
+        width: 150px;
+        height: 130px;
+        margin-left: 15px;
+        margin-top: 40px;
+        background-color: white;
+    }
+    #left > .display img{
+        margin-left: 15px;
+        height: 100%;
+    }
+    #dpad {
+        width: 100px;
+        height: 15px;
+        margin-top: 20px;
+        margin-left: 20px;
+        display: inline-block;
+    }
+    #dpad-top, #dpad-bottom{
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        background-color: rgb(26, 25, 25);
+    }
+    #dpad-horizontal{
+        width: 59px;
+        height: 20px;
+        margin-left: 1px;
+        background-color: rgb(26,25,25);
+    }
+    #btn-circle{
+        width: 35px;
+        height: 35px;
+        margin-left: 120px;
+        border-style: solid;
+        border-color: rgb(238, 48, 48);
+        border-radius: 25px;
+        background-color: red;
+        display: inline-block;
+        
+    }
+    #right > .display{
+        width: 140px;
+        height: 100px;
+        margin-left: 20px;
+        margin-top: 20px;
+        background-color: rgb(155, 229, 229);
+        font-size: 12px;
+    }
+    #pad{
+        width: 148px;
+        height: 65px;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+    #pad > .btn{
+        width: 25px;
+        height: 25px;
+        background-color: rgb(77, 236, 77);
+        display: inline-block;
+        border-style: solid;
+        border-color: green;
+        border-width: 2px;
+        border-radius: 5px;
+    }
+    ul{
+        font-size: 10px;
+    }
 }
 @media only screen and (min-width:640px) and (max-width:1023px){
     header{
@@ -174,6 +296,7 @@ ul.topnav {
     }
     .topnav li.right,
     ul.topnav li {float: none;}
+
 }
 @media only screen and (min-width:1024px) and (max-width:1279px){
    header{

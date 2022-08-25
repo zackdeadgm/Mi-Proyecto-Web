@@ -61,6 +61,9 @@ div{
     padding-top: 10px;
 }
 @media screen and (max-width:639px){
+    ul.topnav{
+        width: 100%;
+    }
     body{
         font-size: 9pt;
         width: 100%;
